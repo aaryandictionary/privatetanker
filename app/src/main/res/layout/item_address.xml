@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FDFDFD">
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="8dp"
+            android:maxLines="2"
+            android:text="H-39, Shivaji Park, West Punjabi Bagh, New Delhi"
+            android:textColor="@color/colorGrayDark"
+            android:textSize="16sp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/txtAddressType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Society"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/txtAddress"
+            android:drawableStart="@drawable/ic_society"
+            android:layout_marginBottom="8dp"
+            android:drawablePadding="8dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGrayLight"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_below="@id/txtAddressType"/>
+    </RelativeLayout>
+
+</RelativeLayout>

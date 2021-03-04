@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FDFDFD"
+    android:layout_marginEnd="40dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGrayDark"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:text="Change Mobile"/>
+
+        <RelativeLayout
+            android:id="@+id/relVerify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@id/title">
+
+            <TextView
+                android:id="@+id/txtVerifyMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter the OTP sent to your mobile number
++91 9358174783"/>
+
+            <EditText
+                android:id="@+id/textOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrayLighter"
+                android:padding="12dp"
+                android:layout_below="@id/txtVerifyMessage"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:hint="OTP"
+                android:inputType="phone"/>
+
+            <RelativeLayout
+                android:id="@+id/relVerifyMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textOtp"
+                android:paddingStart="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="40dp"
+                android:layout_centerHorizontal="true"
+                android:paddingEnd="40dp"
+                android:background="@color/colorAccent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verify"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relSendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@id/title">
+
+            <EditText
+                android:id="@+id/textMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrayLighter"
+                android:padding="12dp"
+                android:layout_marginTop="30dp"
+                android:hint="Enter Mobile"
+                android:inputType="phone"/>
+
+            <TextView
+                android:id="@+id/txtSendOtpMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textMobile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="A 6 digit OTP will be sent to your mobile
+number."/>
+
+            <RelativeLayout
+                android:id="@+id/relSendOtpBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtSendOtpMessage"
+                android:paddingStart="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="40dp"
+                android:layout_centerHorizontal="true"
+                android:paddingEnd="40dp"
+                android:background="@color/colorAccent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send OTP"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

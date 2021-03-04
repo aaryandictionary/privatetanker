@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relAddress"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_location_unselected"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="18sp"
+            android:autoSizeTextType="uniform"
+            android:minHeight="80dp"
+            android:text="H-39, Shivaji Park, West Punjabi Bagh, New Delhi"
+            android:textColor="@color/colorGrayDark"
+            android:layout_margin="12dp"
+            android:textSize="18sp"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="8dp"/>
+    </RelativeLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "454681563816",
+    "project_id": "privatetanker-6c68f",
+    "storage_bucket": "privatetanker-6c68f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454681563816:android:22920dbec82079e0c6e89d",
+        "android_client_info": {
+          "package_name": "com.project.privatetanker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454681563816-t0pgpn5pj34rugbqdro4hbnr7idlkl0g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.privatetanker",
+            "certificate_hash": "c4d35bbe237d71a8af104c8b25073db86aa4acd6"
+          }
+        },
+        {
+          "client_id": "454681563816-4aa0b40uimaib2vuiibf57lkgop3hmf8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKCaJj72vUz8onJGzLbC1r9lj4bBDxO0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454681563816-4aa0b40uimaib2vuiibf57lkgop3hmf8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

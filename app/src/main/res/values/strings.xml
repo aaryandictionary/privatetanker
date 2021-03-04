@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PrivateTanker</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
+</resources>

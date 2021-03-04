@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FDFDFD"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmBooking">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Confirm Booking"
+        app:titleTextColor="@color/colorWhite"
+        android:background="@color/colorPrimary">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/relBottom">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relMain"
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/relUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_profile_border">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circularProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@color/colorGrayLight"/>
+            <TextView
+                android:id="@+id/txtCustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aryan Raj"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@id/circularProfile"
+                android:layout_marginStart="8dp"/>
+            <TextView
+                android:id="@+id/txtCustomerType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Society President"
+                android:layout_below="@id/txtCustomerName"
+                android:layout_toRightOf="@id/circularProfile"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/txtMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCustomerType"
+                android:layout_toRightOf="@id/circularProfile"
+                android:layout_marginStart="8dp"
+                android:text="+91 9358174783"
+                android:drawableStart="@drawable/ic_call"
+                android:drawablePadding="8dp"
+                android:layout_marginTop="4dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:padding="10dp"
+                android:layout_marginEnd="4dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/relUserProfile"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txtAddressType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Society"
+                    android:maxLines="1"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_society"
+                    android:drawablePadding="4dp"/>
+
+                <TextView
+                    android:id="@+id/txtCapacity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="12,000 Lt"
+                    android:textSize="16sp"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_bottle"
+                    android:drawablePadding="4dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="2 Nov'20"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:drawableStart="@drawable/ic_date"
+                    android:drawablePadding="4dp"/>
+
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="10:00 AM"
+                    android:textSize="16sp"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_time"
+                    android:drawablePadding="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="8dp"
+            android:maxLines="2"
+            android:text="H-39, Shivaji Park, West Punjabi Bagh, New Delhi"
+            android:textColor="@color/colorGrayDark"
+            android:textSize="16sp"
+            android:layout_below="@id/linDetails"
+            android:layout_margin="8dp"/>
+
+        <RelativeLayout
+            android:id="@+id/relInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/txtAddress">
+        <TextView
+            android:id="@+id/tSI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Special Instructions"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tSI"
+                android:textSize="16sp"
+                android:text="Call me on my number when you arrive."
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/relInstructions">
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayLight"/>
+            <LinearLayout
+                android:id="@+id/linHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Particulars"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorGrayDark"
+                    android:layout_weight="6"
+                    android:padding="10dp"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorGrayLight"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:layout_weight="3"
+                    android:textColor="@color/colorGrayDark"
+                    android:padding="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayLight"
+                android:layout_below="@id/linHeading"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view3"/>
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_centerInParent="true"/>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/recyclerBill"
+                android:background="@color/colorGrayLight"/>
+            <LinearLayout
+                android:id="@+id/linFooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view4"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:padding="10dp"
+                    android:text="Total"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorGrayLight"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rs 11,000"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:gravity="end"
+                    android:layout_weight="3"
+                    android:padding="10dp"/>
+            </LinearLayout>
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorGrayLight"
+                android:layout_below="@id/linFooter"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </RelativeLayout>
+    </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/relBottom"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/bg_shadow"/>
+
+        <RadioButton
+            android:id="@+id/radioPayOnDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay on Delivery"
+            android:textSize="16sp"
+            android:checked="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorGrayDark"/>
+
+        <RelativeLayout
+            android:id="@+id/relButtons"
+            android:layout_width="match_parent"
+            android:layout_below="@id/radioPayOnDelivery"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/relBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:background="@drawable/btn_white_with_border">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:padding="12dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relConfirmBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="180dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:background="@drawable/btn_solid_accent"
+                android:layout_alignParentEnd="true">
+                <TextView
+                    android:id="@+id/txtConfirmReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Booking"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:padding="12dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relUpdateConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="180dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@drawable/btn_white_with_border"
+                android:layout_alignParentEnd="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update Confirm"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:padding="12dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

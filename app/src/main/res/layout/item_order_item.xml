@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#FDFDFD"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relBooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_profile_border">
+
+        <LinearLayout
+            android:id="@+id/linTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="8dp"
+            android:weightSum="2">
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="8dp"
+                android:text="H-39, Shivaji Park, West Punjabi Bagh, New Delhi"
+                android:textColor="@color/colorGrayDark"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="16sp"
+                android:layout_weight="1.5" />
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Rs 12000"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:textSize="16sp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linTop"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txtAddressType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Society"
+                    android:maxLines="1"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_society"
+                    android:drawablePadding="4dp"/>
+
+                <TextView
+                    android:id="@+id/txtCapacity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="12,000 Lt"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_bottle"
+                    android:drawablePadding="4dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="2 Nov'20"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_date"
+                    android:drawablePadding="4dp"/>
+
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="10:00 AM"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_time"
+                    android:drawablePadding="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/linDetails"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/linDetails"
+            android:text="Processing"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorYellow"
+            android:textSize="16sp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
